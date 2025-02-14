@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Si quieres usar colores, descomenta y ajusta
+        
         uno: "#2E8B57",
         dos: "#173F3F",
         tres: "#A2D9A0",
