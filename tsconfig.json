@@ -1,0 +1,14 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" },
+  ],
+  "compilerOptions": {
+    "types": ["node"], 
+    "baseUrl": ".", // Ruta base para los imports
+    "paths": {
+      "@/*": ["./src/*"] // Mapea el alias '@/' a la carpeta 'src'
+    }
+  }
+}
