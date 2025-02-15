@@ -4,8 +4,11 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: "4rem",
+      },
       colors: {
-        
         uno: "#2E8B57",
         dos: "#173F3F",
         tres: "#A2D9A0",

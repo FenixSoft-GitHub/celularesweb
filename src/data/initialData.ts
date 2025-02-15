@@ -671,3 +671,5 @@ export const popularCelulares = [
 		],
 	},
 ];
+
+

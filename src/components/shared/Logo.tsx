@@ -4,7 +4,7 @@ export const Logo = () => {
   return (
     <Link
       to="/"
-      className={`text-2xl font-bold tracking-tighter transition-all`}
+      className={`text-4xl font-bold tracking-tighter transition-all great`}
     >
       <p className="hidden lg:block">
         Celulares

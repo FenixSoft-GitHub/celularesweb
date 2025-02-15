@@ -4,13 +4,19 @@ import { Link, NavLink } from "react-router";
 import { navbarLinks } from "@/constants/links";
 import { Logo } from "./Logo";
 
+interface link {
+  id: number;
+  title: string;
+  href: string;
+}
+
 export const NavBar = () => {
   return (
-    <header className="bg-white bg-primary text-black py-4 flex items-center justify-between px-5 border-b border-slate-200 lg:px-12">
+    <header className="bg-white text-black py-4 flex items-center justify-between px-5 border-b border-slate-200 lg:px-12">
       <Logo />
 
       <nav className="space-x-5 hidden md:flex">
-        {navbarLinks.map((link) => (
+        {navbarLinks.map((link: link) => (
           <NavLink
             key={link.id}
             to={link.href}

@@ -1,7 +1,14 @@
 import { BiChevronRight } from "react-icons/bi";
 import { Link } from "react-router";
 import { socialLinks } from "@/constants/links";
+import { IconType } from "react-icons";
 
+interface link {
+  id: number;
+  title: string;
+  href: string;
+  icon: string
+}
 export const Footer = () => {
   return (
     <footer className="py-16 bg-gray-950 px-12 flex justify-between gap-10 text-slate-200 text-sm flex-wrap mt-10 md:flex-nowrap">
@@ -53,7 +60,7 @@ export const Footer = () => {
         </p>
 
         <div className="flex">
-          {socialLinks.map((link) => (
+          {socialLinks.map((link: link) => (
             <a
               key={link.id}
               href={link.href}

@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router";
 import { RootLatout } from "@/layouts/RootLatout";
+import { AboutPage, CellPhonesPage, HomePage } from "../pages";
 
 
 export const router = createBrowserRouter([
@@ -7,9 +8,9 @@ export const router = createBrowserRouter([
     path: "/",
     element: <RootLatout />,
     children: [
-      { path: "/", element: <h2>Home</h2> },
-      { path: "celulares", element: <h2>Celulares</h2> },
-      { path: "nosotros", element: <h2>Sobre Nosotros</h2> },
+      { path: "/", element: <HomePage/> },
+      { path: "celulares", element: <CellPhonesPage/> },
+      { path: "nosotros", element: <AboutPage/> },
       { path: "otros", element: <h2>Otros</h2> },
     ],
   },
