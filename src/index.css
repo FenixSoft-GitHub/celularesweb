@@ -1,15 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
 @import "tailwindcss";
-/* @import "tailwindcss/preflight"; */
 
-@tailwindcss base;
-@tailwindcss components;
-@tailwindcss utilities;
+@theme {
+  --font-display: "Montserrat", "sans-serif";
+  --font-display2: "Great Vibes", serif;
 
+  --breakpoint-3xl: 1920px;
+
+  --color-avocado-100: oklch(0.99 0 0);
+  --color-avocado-200: oklch(0.98 0.04 113.22);
+  --color-avocado-300: oklch(0.94 0.11 115.03);
+  --color-avocado-400: oklch(0.92 0.19 114.08);
+  --color-avocado-500: oklch(0.84 0.18 117.33);
+  --color-avocado-600: oklch(0.53 0.12 118.34);
+
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+
+  /* ... */
+}
+
+:root {
+  --font-display: "Montserrat", sans-serif;
+  --font-display2: "Great Vibes", serif;
+
+  --breakpoint-3xl: 1920px;
+
+  --color-avocado-100: oklch(0.99 0 0);
+  --color-avocado-200: oklch(0.98 0.04 113.22);
+  --color-avocado-300: oklch(0.94 0.11 115.03);
+  --color-avocado-400: oklch(0.92 0.19 114.08);
+  --color-avocado-500: oklch(0.84 0.18 117.33);
+  --color-avocado-600: oklch(0.53 0.12 118.34);
+
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+
+  /* ... */
+}
 
 body {
-  font-family: 'Montserrat';
+  font-family: var(--font-display);
   background-color: #F8F9FA;
 }
 
@@ -18,9 +48,27 @@ body {
   padding: 1rem;
 }
 
-.great {
-  font-family: "Great Vibes", serif;
-  font-weight: 400;
-  font-style: normal;
+/* CLASES PERSONALIZADAS */
+.btn-paginated {
+	@apply border border-slate-700 rounded-md font-semibold text-xs py-1 px-3 hover:bg-slate-700 hover:text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:border-slate-800 disabled:text-slate-800 disabled:hover:bg-white disabled:hover:text-slate-700;
 }
 
+.btn-primary {
+	@apply bg-black text-white py-2 px-3 text-sm font-medium rounded-md;
+}
+
+.btn-secondary-outline {
+	@apply border border-slate-400 text-slate-600 py-2 px-3 text-sm font-medium rounded-md;
+}
+
+/* Para Chrome, Safari, Edge y Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Para firefox */
+input[type=number]{
+	-moz-appearance: textfield;
+}

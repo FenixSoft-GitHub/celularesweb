@@ -43,7 +43,7 @@ export const CardProduct = ({
           <img src={img} alt={name} className="object-contain h-full w-full" />
         </div>
 
-        <button className="bg-white border border-slate-200 absolute w-full bottom-0 py-3 rounded-3xl flex items-center justify-center gap-1 text-sm font-medium hover:bg-stone-100 translate-y-[100%] transition-all duration-300 group-hover:translate-y-0">
+        <button className="bg-white border font-display border-slate-200 absolute w-full bottom-0 py-3 rounded-3xl flex items-center justify-center gap-1 text-sm font-medium hover:bg-stone-100 translate-y-[100%] transition-all duration-300 group-hover:translate-y-0">
           <FiPlus />
           Añadir
         </button>
